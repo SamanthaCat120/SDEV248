@@ -1,7 +1,12 @@
 Bug Report for M01
 
-!!For paycheck calculator:
+##For paycheck calculator:
 
 Adapted code from 140 project. Getting error that the is generating an error that says "identifier "gross" not declared in the current scope (under the func calculateGross(hours, rate)". Realized the functions were looking in the wrong place for the inputs. Moved inputs from being child nodes of the labels (which describe the inputs).
 
 Now getting error "unexpected identifier in class body". Looked it up and you can't assign a variable in the main part. Added the Onready to the var results_label line.
+Moved variables within functions.
+Got error for Invalid operands 'Nil' and 'float' in opeator '*'.
+Saw where I had indented "return gross" on line 39 so that it only returned it if the if statement was false. Corrected indentation.
+
+In Rock_Paper_Scissors game, getting a parser error. It's saying that self, "_on_option_selected" isn't callable.
