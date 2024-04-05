@@ -1,1 +1,49 @@
 Have script entered by adapting an existing project done in 140. Script is giving a null error. 
+
+Originally ended up trying:
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+func combinations(pool: Array, r: int, process_combination: Callable) -> void:
+	var n = pool.size()
+
+	var generate_combinations = func(offset: int, combination: Array) -> void:
+		if combination.size() == r:
+			process_combination(combination)
+			return
+		for i in range(offset, n):
+			var new_combination = combination + [pool[i]]
+			generate_combinations(i, new_combination)
+		
+	generate_combinations(0, [])
+
+func process_combination(combination: Array) -> void:
+	print("Combination:", combination)
+
+var lambda_function = process_combination
+
+
+
+
+
+func _narc(n: int) -> Array:
+	var numbers = []
+	var order = str(n).length()
+	for k in range(1, order + 1):
+		var a = []
+		for i in range(10):
+			a.append(i ** k)
+		for b in Combinations(range(10), k):
+			var x = 0
+			for y in b:
+				x += a[y]
+			if x > 0 and Array(sorted(String(x).to_array().sort())) == b:
+				numbers.append(x)
+	numbers.sort()
+	return numbers
+
+[end code sample]
+
+updated code with help from other people
