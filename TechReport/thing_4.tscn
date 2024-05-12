@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8s2xfpis40gg"]
+
+[ext_resource type="Script" path="res://thing_4.gd" id="1_3emsh"]
+
+[node name="thing_4" type="Node2D"]
+script = ExtResource("1_3emsh")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 523.0
+offset_bottom = 333.0
+text = "Apple ad Fail
+
+An ad released by Apple shows symbols of human creativity, “like musical instruments, paint cans, an ‘80s arcasde game and a bust of a human head crushed by a giant hydraulic press. As the metal slabs of the hydraulic press lift, Apple’s new iPad Pro is revealed.” The intention of the ad was to show that all sorts of creative endeavors could be pursued on an iPad. However, the general response was negative with comments such as “The symbolism of indiscriminately crushing beautiful creative tools is an interesting choice” and “This ad effectively convinced me I need less technology in my life.”  (https://www.cnn.com/2024/05/09/tech/apple-apologizes-for-ipad-pro-ad/index.html)
+The negative response was probably made more intense by increasing fears  that AI could replace workers, especially those in creative fields.
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 471.0
+offset_right = 394.0
+offset_bottom = 526.0
+text = "Back to Main Page"
+
+[connection signal="pressed" from="Label/Button" to="." method="_on_button_pressed"]

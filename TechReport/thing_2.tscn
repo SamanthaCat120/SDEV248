@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcuwj2uboelaf"]
+
+[ext_resource type="Script" path="res://thing_2.gd" id="1_wg4av"]
+[ext_resource type="Texture2D" uid="uid://igawcblcnr5q" path="res://oneCourtDevice.png" id="2_cb00f"]
+
+[node name="Thing_2" type="Node2D"]
+script = ExtResource("1_wg4av")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 653.0
+offset_bottom = 578.0
+text = "OneCourt
+OneCourt brings new experience to visually impaired fans.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Fans who are visually impaired are able to enjoy live sports games, but they do so often on a slight delay, having to listen to someone describe the action and then discern from the words what is happening on the field. With a new device OneCourt hopes to bring a more immediate experience to those fans.
+A device has been created that syncs to a television or radio broadcast and tracks key movements. These movements are then translated into spatial haptics. 
+As stated in GeekWire’s article, “OneCourt‘s technology and hardware translates gameplay data into spatial haptics. The company’s tabletop device syncs to the television or radio broadcast of a football, basketball or baseball game, for instance, and tracks key movements and plays in the game with tactile playing-field outlines and vibrations under a user’s fingers.
+Many blind or vision-impaired sports fans rely solely on audio to follow a sporting event, but that audio can often be behind the live action, and makes going to in-stadium events less appealing. Audio can also lack certain spatial details about what’s transpiring.” 
+(https://www.geekwire.com/2024/seattle-startup-wants-to-bring-vision-impaired-sports-fans-closer-to-the-action-with-tactile-device/)"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 888.0
+offset_right = 354.0
+offset_bottom = 940.0
+text = "Back to Main Page"
+
+[node name="OneCourtDevice" type="Sprite2D" parent="."]
+position = Vector2(315, 251)
+scale = Vector2(1, 0.751468)
+texture = ExtResource("2_cb00f")
+
+[connection signal="pressed" from="Label/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch3riolbwqdoo"]
+
+[ext_resource type="Script" path="res://thing_1.gd" id="1_fh8gc"]
+
+[node name="Thing1" type="Node2D"]
+script = ExtResource("1_fh8gc")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 583.0
+offset_bottom = 382.0
+text = "In gaming news,
+Microsoft said they are going to come out with a gaming store. In an interview with Xbox president Sarah Bond, at a Bloomberg event, who said the online gaming store will be available July on web browsers, rather than on a dedicated app.
+With the acquisition of Blizzard for 68.7 billion dollars, (https://www.theverge.com/2022/1/18/22406059/xbox-game-pass-subscribers-25-million-microsoft-activision) there has been much anticipation for expansion.
+With Microsoft’s recently-acquired Candy Crush Saga serving as a day-one tentpole franchise, this brings Microsoft’s ownership of games including Call of Duty, World of Warcraft, and legacy games (relatively) recently added, Wolfenstein, Elder Scrolls, and Fallout. Microsoft seems to be in competition with Amazon for world domination (author’s opinion). As stated in the article “Microsoft is launching a mobile game store, taking on Apple and Google”, The move sets the stage for a new competition between Microsoft and both Google and Apple, since most mobile games are sold and downloaded through their respective app stores.
+Update, May 10: Microsoft’s Xbox President Sarah Bond shared this statement:
+“We continue to focus on creating great content and finding ways to bring more value to developers. This year we will debut our first mobile offering where mobile players can find deals on their favorite in-game items and discover new games, starting on the web so players can access it anywhere. This web-based store is the first step in our journey to building a trusted app store with its roots in gaming.”
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 707.0
+offset_right = 326.0
+offset_bottom = 765.0
+text = "Back to Main Page"
+
+[connection signal="pressed" from="Label/Button" to="." method="_on_button_pressed"]

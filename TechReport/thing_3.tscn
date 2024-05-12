@@ -1,0 +1,25 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxkf1oa4aktlq"]
+
+[ext_resource type="Script" path="res://thing_3.gd" id="1_5kbkx"]
+
+[node name="thing_3" type="Node2D"]
+script = ExtResource("1_5kbkx")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 744.0
+offset_bottom = 503.0
+text = "Microsoft’s annual Work Trend index shows that 75% of people are already using AI at work. However, 46% of them started using it less than 6 months ago. The report surveyed 31,000 people across 31 countries and using trillions of data points from Microsoft and Fortune 500 companies. The study describes the transformation of work over the past several years. It covers the impact of remote and hybrid work to the rise of artificial intelligence in the work place. (https://www.geekwire.com/2024/microsoft-study-finds-75-of-knowledge-workers-using-ai-at-work-nearly-doubling-in-six-months/)
+The study claims that people who use AI intensely are able to save 30 minutes a day. Additionally, LinkedIn is seeing an increase in people adding AI skills to their profiles. (https://www.scrippsnews.com/science-and-tech/artificial-intelligence/microsoft-report-shows-employees-are-using-ai-in-the-workplace-at-large)
+"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 269.0
+offset_top = 358.0
+offset_right = 419.0
+offset_bottom = 413.0
+text = "Back to Main Page"
+
+[connection signal="pressed" from="Label/Button" to="." method="_on_button_pressed"]

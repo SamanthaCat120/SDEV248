@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://cjcymbj5eqy30"]
+
+[ext_resource type="Script" path="res://intro.gd" id="1_incf6"]
+
+[node name="Intro" type="Node2D"]
+script = ExtResource("1_incf6")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 535.0
+offset_bottom = 347.0
+text = "Neat Things Happening in Tech!!!"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="GamingStore" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 304.0
+offset_top = 46.0
+offset_right = 518.0
+offset_bottom = 100.0
+text = "Micrsoft World
+Domina-- er..Gaming Store"
+
+[node name="AppleAdFail" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 45.0
+offset_top = 215.0
+offset_right = 163.0
+offset_bottom = 268.0
+text = "Apple Ad Fail"
+
+[node name="OneCourt" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 342.0
+offset_top = 214.0
+offset_right = 492.0
+offset_bottom = 268.0
+text = "Device for Visually
+ Impaired"
+
+[node name="AIinWorkplace" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 38.0
+offset_right = 229.0
+offset_bottom = 80.0
+text = "AI in the Workplace Study"
+
+[node name="Exit" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 214.0
+offset_top = 304.0
+offset_right = 292.0
+offset_bottom = 346.0
+text = "Exit"
+
+[connection signal="pressed" from="Label/GamingStore" to="." method="_on_gaming_store_pressed"]
+[connection signal="pressed" from="Label/AppleAdFail" to="." method="_on_apple_ad_fail_pressed"]
+[connection signal="pressed" from="Label/OneCourt" to="." method="_on_one_court_pressed"]
+[connection signal="pressed" from="Label/AIinWorkplace" to="." method="_on_a_iin_workplace_pressed"]
+[connection signal="pressed" from="Label/Exit" to="." method="_on_exit_pressed"]
